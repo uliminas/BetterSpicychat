@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/stylus-spicychat.ai
-@version        1.1.0
+@version        1.1.1
 @description    Theme made to look like the old theme with extra features
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/stylus-spicychat.ai
@@ -12,7 +12,7 @@
 @-moz-document url-prefix("https://spicychat.ai/chat/") {
     /* Message BG */
     .bg-gray-4 {
-        background-color: rgb(28, 28, 28) !important;
+        background-color: rgb(25, 25, 25) !important;
     }
     .bg-blumine-6 {
         background-color: rgb(13, 22, 39) !important;
