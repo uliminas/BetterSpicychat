@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/BetterSpicychat
-@version        2.1.4
+@version        2.2.4
 @description    A custom Stylus theme for SpicyChat, inspired by the old look but enhanced with modern styling, layout tweaks, and usability improvements.
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/BetterSpicychat
@@ -11,6 +11,7 @@
 @preprocessor   stylus
 
 @var color bsc-italic-color "Italic Color" rgb(0, 200, 255)
+@var text bsc-prev-chat-width "Previous Chat Width" 1200px
 @var text bsc-chat-width "Chat Width" 1200px
 @var text bsc-chatbubble-padding "Chatbubble Padding" 250px
 @var color bsc-chatbubble-left "Left Chatbubble Color" rgb(25, 25, 25)
@@ -25,6 +26,9 @@
     --bsc-chatbubble-padding: bsc-chatbubble-padding;
     --bsc-chatbubble-left: bsc-chatbubble-left;
     --bsc-chatbubble-right: bsc-chatbubble-right;
+
+    /* prev. chat */
+    --bsc-prev-chat-width: bsc-prev-chat-width
 }
 
 @-moz-document url-prefix("https://spicychat.ai/chat/") {
@@ -35,7 +39,7 @@
     }
 
     /* Advert */
-    .\[\&_iframe\]\:rounded-2xl > .w-full {
+    .w-full.py-0.flex-shrink-0 > div > .items-undefined.justify-undefined.flex > .w-full.items-center.items-undefined.justify-undefined.flex-col.flex > .justify-center.flex.w-full {
         /* Container */
         display: none !important;
     }
@@ -86,5 +90,10 @@
     em.italic {
         /* Italic Text Color */
         color: var(--bsc-italic-color) !important;
+    }
+    
+    /* Prev. Chat Width */
+    .mx-auto {
+        max-width: var(--bsc-prev-chat-width) !important;
     }
 }
