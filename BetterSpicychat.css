@@ -1,13 +1,14 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/stylus-spicychat.ai
-@version        2.0.0
+@version        2.0.1
 @description    Theme made to look like the old theme with extra features
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/stylus-spicychat.ai
 @updateURL      https://raw.githubusercontent.com/uliminas/stylus-spicychat.ai/refs/heads/main/BetterSpicychat.css
 @supportURL     https://github.com/uliminas/stylus-spicychat.ai/issues
 @license        CC BY-NC-SA 4.0
+@preprocessor   stylus
 ==/UserStyle== */
 
 :root {
