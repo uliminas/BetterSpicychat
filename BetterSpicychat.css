@@ -1,30 +1,109 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/stylus-spicychat.ai
-@version        1.1.1
+@version        2.0.0
 @description    Theme made to look like the old theme with extra features
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/stylus-spicychat.ai
 @updateURL      https://raw.githubusercontent.com/uliminas/stylus-spicychat.ai/refs/heads/main/BetterSpicychat.css
 @supportURL     https://github.com/uliminas/stylus-spicychat.ai/issues
+@license        CC BY-NC-SA 4.0
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://spicychat.ai/chat/") {
-    /* Message BG */
-    .bg-gray-4 {
-        background-color: rgb(25, 25, 25) !important;
-    }
-    .bg-blumine-6 {
-        background-color: rgb(13, 22, 39) !important;
-    }
+:root {
+    --bsc-italic-color: rgb(0, 200, 255);
 
+    /* chat */
+    --bsc-chat-width: 1200px;
+    --bsc-chatbubble-padding: 250px;
+    --bsc-chatbubble-left: rgb(25, 25, 25);
+    --bsc-chatbubble-right: rgb(13, 22, 39);
+}
+
+@-moz-document url-prefix("https://spicychat.ai/chat/") {
     /* Text */
     em.italic {
-        color: rgb(0, 200, 255) !important;
+        /* Italic Text Color */
+        color: var(--bsc-italic-color) !important;
     }
 
     /* Advert */
     .\[\&_iframe\]\:rounded-2xl > .w-full {
+        /* Container */
         display: none !important;
+    }
+
+    /* Top Info Bar */
+    .self-center {
+        /* Container */
+        max-width: var(--bsc-chat-width) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .max-w-\[800px\] {
+        /* Container 2 */
+        max-width: var(--bsc-chat-width) !important;
+    }
+
+    /* Message Input Box */
+    .right-0 {
+        /* Container */
+        max-width: var(--bsc-chat-width) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Left Chatbubble */
+    .bg-gray-4 {
+        /* Chatbubble Color */
+        background-color: var(--bsc-chatbubble-left) !important;
+    }
+    .w-full.items-center.items-undefined.justify-undefined.flex-col.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full {
+        /* Container for Chatbubble w/o Options */
+        max-width: var(--bsc-chat-width) !important;
+        padding-left: 0px !important;
+        padding-right: var(--bsc-chatbubble-padding) !important;
+    }
+    .justify-center.items-undefined.justify-undefined.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full {
+        /* Container for Chatbubble w/ Options */
+        max-width: var(--bsc-chat-width) !important;
+        padding-left: 0px !important;
+        padding-right: var(--bsc-chatbubble-padding) !important;
+    }
+    .w-full.items-center.items-undefined.justify-undefined.flex-col.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full > .bg-gray-4.m-\[0_32px_0_10px\].rounded-\[4px_20px_20px_20px\].\!max-w-\[650px\].py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
+        /* Chatbubble */
+        max-width: var(--bsc-chat-width) !important;
+    }
+    .text-white.dark\:bg-sky-2.bg-sky-9.mx-md.m-\[0_32px_0_10px\].rounded-\[4px_20px_20px_20px\].\!max-w-\[650px\].py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
+        /* Chatbubble when selected for deletion */
+        max-width: var(--bsc-chat-width) !important;
+    }
+
+    /* Right Chatbubble */
+    .bg-blumine-6 {
+        /* Chatbubble Color */
+        background-color: var(--bsc-chatbubble-right) !important;
+    }
+    .justify-between.items-center.bg-transparent.pb-lg.flex.w-full {
+        /* Container */
+        max-width: var(--bsc-chat-width) !important;
+        padding-left: var(--bsc-chatbubble-padding) !important;
+        padding-right: 0px !important;
+    }
+    .dark\:bg-blumine-3.bg-blumine-6.m-\[0_10px_0_53px\].rounded-\[20px_4px_20px_20px\].\!max-w-\[600px\].\!w-fit.py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
+        /* Chatbubble */
+        max-width: var(--bsc-chat-width) !important;
+    }
+    .mx-md.dark\:bg-blumine-3.bg-blumine-6.m-\[0_10px_0_53px\].rounded-\[20px_4px_20px_20px\].\!max-w-\[600px\].\!w-fit.py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
+        /* Chatbubble when selected for deletion */
+        max-width: var(--bsc-chat-width) !important;
+    }
+}
+
+@-moz-document url-prefix("https://spicychat.ai/chats") {
+    /* Text */
+    em.italic {
+        /* Italic Text Color */
+        color: var(--bsc-italic-color) !important;
     }
 }
