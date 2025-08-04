@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/BetterSpicychat
-@version        2.0.2
+@version        2.0.3
 @description    A custom Stylus theme for SpicyChat, inspired by the old look but enhanced with modern styling, layout tweaks, and usability improvements.
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/BetterSpicychat
@@ -35,14 +35,10 @@
     }
 
     /* Top Info Bar */
-    .self-center {
-        /* Container */
+    [class*="max-w-[800px]"] {
         max-width: var(--bsc-chat-width) !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
     }
-    .max-w-\[800px\] {
-        /* Container 2 */
+    .self-center {
         max-width: var(--bsc-chat-width) !important;
     }
 
@@ -56,48 +52,26 @@
 
     /* Left Chatbubble */
     .bg-gray-4 {
-        /* Chatbubble Color */
         background-color: var(--bsc-chatbubble-left) !important;
+        max-width: var(--bsc-chat-width) !important;
     }
-    .w-full.items-center.items-undefined.justify-undefined.flex-col.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full {
+    .justify-start.items-center.bg-transparent.pb-lg.flex.w-full {
         /* Container for Chatbubble w/o Options */
         max-width: var(--bsc-chat-width) !important;
         padding-left: 0px !important;
         padding-right: var(--bsc-chatbubble-padding) !important;
     }
-    .justify-center.items-undefined.justify-undefined.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full {
-        /* Container for Chatbubble w/ Options */
-        max-width: var(--bsc-chat-width) !important;
-        padding-left: 0px !important;
-        padding-right: var(--bsc-chatbubble-padding) !important;
-    }
-    .w-full.items-center.items-undefined.justify-undefined.flex-col.flex > .justify-start.items-center.bg-transparent.pb-lg.flex.w-full > .bg-gray-4.m-\[0_32px_0_10px\].rounded-\[4px_20px_20px_20px\].\!max-w-\[650px\].py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
-        /* Chatbubble */
-        max-width: var(--bsc-chat-width) !important;
-    }
-    .text-white.dark\:bg-sky-2.bg-sky-9.mx-md.m-\[0_32px_0_10px\].rounded-\[4px_20px_20px_20px\].\!max-w-\[650px\].py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
-        /* Chatbubble when selected for deletion */
-        max-width: var(--bsc-chat-width) !important;
-    }
 
     /* Right Chatbubble */
     .bg-blumine-6 {
-        /* Chatbubble Color */
         background-color: var(--bsc-chatbubble-right) !important;
+        max-width: var(--bsc-chat-width) !important;
     }
     .justify-between.items-center.bg-transparent.pb-lg.flex.w-full {
         /* Container */
         max-width: var(--bsc-chat-width) !important;
         padding-left: var(--bsc-chatbubble-padding) !important;
         padding-right: 0px !important;
-    }
-    .dark\:bg-blumine-3.bg-blumine-6.m-\[0_10px_0_53px\].rounded-\[20px_4px_20px_20px\].\!max-w-\[600px\].\!w-fit.py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
-        /* Chatbubble */
-        max-width: var(--bsc-chat-width) !important;
-    }
-    .mx-md.dark\:bg-blumine-3.bg-blumine-6.m-\[0_10px_0_53px\].rounded-\[20px_4px_20px_20px\].\!max-w-\[600px\].\!w-fit.py-md.px-\[13px\].w-full.gap-md.items-undefined.justify-undefined.flex-col.flex {
-        /* Chatbubble when selected for deletion */
-        max-width: var(--bsc-chat-width) !important;
     }
 }
 
