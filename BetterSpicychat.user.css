@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           BetterSpicychat
 @namespace      https://github.com/uliminas/BetterSpicychat
-@version        2.2.5
+@version        2.2.6
 @description    A custom Stylus theme for SpicyChat, inspired by the old look but enhanced with modern styling, layout tweaks, and usability improvements.
 @author         Uliminas
 @homepageURL    https://github.com/uliminas/BetterSpicychat
@@ -77,7 +77,7 @@
         background-color: var(--bsc-chatbubble-right) !important;
         max-width: var(--bsc-chat-width) !important;
     }
-    .justify-between.items-center.bg-transparent.pb-lg.flex.w-full {
+    .justify-between.items-center.bg-transparent.mb-lg.flex.w-full {
         /* Container */
         max-width: var(--bsc-chat-width) !important;
         padding-left: var(--bsc-chatbubble-padding) !important;
